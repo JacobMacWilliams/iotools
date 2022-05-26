@@ -43,9 +43,6 @@ def gen_title(path:str, axis_1:str, axis_2:str) -> str:
     header = name + '_' + axis_1 + '_v_' + axis_2
 
     return header
-print(os.getcwd())
-print(f'{sys.argv[1]}')
-print(30)
 check_args(*sys.argv[1:])
 
 path = sys.argv[1]
@@ -68,5 +65,5 @@ print(len(data[names[x_name]]))
 print(len(data[names[y_name]]))
 print(data[names[y_name]][49])
 plt.plot(names[x_name], names[y_name], data=data)
-plt.savefig('graphs/' + title + '.png')
+plt.savefig('output/' + 'graphs/' + title + '.png')
 plt.close()
